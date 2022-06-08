@@ -36,5 +36,8 @@ models:
     semantic: 
       +materialized: table
       +tags: stage_layer
+    mart:
+      +materialized:view
+      +tags: mart_layer
 
 

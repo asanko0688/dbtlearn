@@ -8,5 +8,5 @@ FROM (
     join {{ ref('stg_nation')}}  LN
     on LC.CTRY_ID=LN.CTRY_ID
     group by LC.CUST_ID,LC.CUST_NAME,LN.CTRY_NAME
-    order by CTRY_NAME, RN 
-) WHERE RN<=5
+    
+) WHERE RN<=5 order by CTRY_NAME, RN 
