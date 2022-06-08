@@ -35,5 +35,6 @@ models:
   my_new_project:
     semantic: 
       +materialized: table
+      +tags: stage_layer
 
 
