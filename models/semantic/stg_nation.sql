@@ -1,0 +1,4 @@
+select N_NATIONKEY AS CTRY_ID,
+N_NAME AS CTRY_NAME
+FROM {{ source('CRM', 'nation') }}
+ORDER BY CTRY_NAME

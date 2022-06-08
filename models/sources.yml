@@ -1,7 +1,10 @@
 version: 2
 
 sources:
-  - name: LANDING
+  - name: CRM
+    database: RAW
+    schema: LANDING
     tables:
       - name: orders
       - name: customer
+      - name: nation

@@ -1,7 +1,9 @@
-select C_CUSTKEY AS CUSTID,
+
+select 
+C_CUSTKEY AS CUST_ID,
 C_NAME AS CUST_NAME ,
 C_ADDRESS AS CUST_ADDRESS,
 C_PHONE AS CUST_PHONE,
 C_ACCTBAL AS CUST_ACCNT_BAL
-from {{ source('LANDING', 'customer') }}
-ORDER BY CUSTID --
+from {{ source('CRM', 'customer') }}
+ORDER BY CUST_ID --
