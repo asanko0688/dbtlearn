@@ -8,3 +8,10 @@ sources:
       - name: orders
       - name: customer
       - name: nation
+      - name: customer_subscription
+
+  - name: ABC
+    database: AUDIT
+    schema: EXECUTION_LOGS
+    tables:
+      - name: JOB_RUN_HISTORY

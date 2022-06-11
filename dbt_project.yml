@@ -36,8 +36,13 @@ models:
     semantic: 
       +materialized: table
       +tags: stage_layer
+      +pre-hook: "{{ insert_update_metadata(this,'INSERT') }}"
+      +post-hook: "{{ insert_update_metadata(this,'UPDATE') }}"
     mart:
-      +materialized:view
       +tags: mart_layer
+      +materialized: view
+    snapshots:
+      +tags: snapshot
+      
 
 
