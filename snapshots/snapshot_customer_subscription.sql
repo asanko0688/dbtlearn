@@ -2,7 +2,7 @@
 
 {{
     config(
-
+      target_database= env_var('DBT_STAGE_DB'),
       target_schema=env_var('DBT_SNAPSHOT_SCHEMA'),
       unique_key='SUBSCRIPTION_ID',
       strategy='timestamp',

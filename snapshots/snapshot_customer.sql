@@ -2,8 +2,8 @@
 
 {{
     config(
-
-      target_schema='ABASAK',
+      target_database= env_var('DBT_STAGE_DB'),
+      target_schema=env_var('DBT_SNAPSHOT_SCHEMA'),
       unique_key='CUST_ID',
       strategy='check',
       check_cols=['HASH_VAL']
