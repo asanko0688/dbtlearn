@@ -34,14 +34,20 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   my_new_project:
     semantic: 
+      +database: "{{env_var('DBT_STAGE_DB')}}"
+      +schema: "{{env_var('DBT_SEMANTIC_SCHEMA')}}"
       +materialized: table
       +tags: stage_layer
       +pre-hook: "{{ insert_update_metadata(this,'INSERT') }}"
       +post-hook: "{{ insert_update_metadata(this,'UPDATE') }}"
     mart:
+      +database: "{{env_var('DBT_MART_DB')}}"
+      +schema: "{{env_var('DBT_MART_SCHEMA')}}"
       +tags: mart_layer
       +materialized: view
     snapshots:
+      +database: "{{env_var('DBT_STAGE_DB')}}"
+      +schema: "{{env_var('DBT_SNAPSHOT_SCHEMA')}}"
       +tags: snapshot
       
 

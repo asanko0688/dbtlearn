@@ -2,8 +2,8 @@ version: 2
 
 sources:
   - name: CRM
-    database: RAW
-    schema: LANDING
+    database: "{{env_var('DBT_RAW_DB')}}"
+    schema: "{{env_var('DBT_LANDING_SCHEMA')}}"
     tables:
       - name: orders
       - name: customer
@@ -11,7 +11,7 @@ sources:
       - name: customer_subscription
 
   - name: ABC
-    database: AUDIT
-    schema: EXECUTION_LOGS
+    database: "{{env_var('DBT_AUDIT_DB')}}"
+    schema: "{{env_var('DBT_LOGS_SCHEMA')}}"
     tables:
       - name: JOB_RUN_HISTORY

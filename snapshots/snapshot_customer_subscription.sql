@@ -3,7 +3,7 @@
 {{
     config(
 
-      target_schema='ABASAK',
+      target_schema=env_var('DBT_SNAPSHOT_SCHEMA'),
       unique_key='SUBSCRIPTION_ID',
       strategy='timestamp',
       updated_at='SRC_LAST_UPDATE_TIME',
