@@ -9,6 +9,7 @@ sources:
       - name: customer
       - name: nation
       - name: customer_subscription
+      - name: country_state
 
   - name: ABC
     database: "{{env_var('DBT_AUDIT_DB')}}"
