@@ -49,6 +49,10 @@ models:
       +database: "{{env_var('DBT_STAGE_DB')}}"
       +schema: "{{env_var('DBT_SNAPSHOT_SCHEMA')}}"
       +tags: snapshot
-      
+seeds:
+  name:
+    country_state:
+      database: RAW
+      schema: LANDING      
 
 
