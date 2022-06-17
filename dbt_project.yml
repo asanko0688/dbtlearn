@@ -49,4 +49,3 @@ models:
       +database: "{{env_var('DBT_STAGE_DB')}}"
       +schema: "{{env_var('DBT_SNAPSHOT_SCHEMA')}}"
       +tags: snapshot
-    

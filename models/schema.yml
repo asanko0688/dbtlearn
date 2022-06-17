@@ -1,0 +1,8 @@
+version: 2
+models:
+  - name: stg_country_state
+    columns:
+    - name: Code
+      tests:
+        - unique
+        - not_null  
